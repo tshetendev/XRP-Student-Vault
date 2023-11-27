@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Records</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="hisAll">
+        <header class="headingHis">
+            <h1>Grade Records of the Students</h1>
+            <h3>See All Grade Records of the Students</h3>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./form.html">Form</a></li>
+                <li><a href="./history.html">Records</a></li>
+                <!-- <li><a href="#about">About</a></li> -->
+            </ul>
+        </nav>
+
+        <div id="historyContainer"></div>
+    </div>
+
+    <footer>
+        <p>© 2023 XRP Student Vault</p>
+    </footer>
+
+    <script src="frontend.js"></script>
+    <script>
+        // Assuming fetchRecordHistory is defined in frontend.js
+        fetchRecordHistory();
+    </script>
+</body>
+
+<style>
+    ul {
+        list-style-type: none;
+        overflow: hidden;
+        background-color: rgb(49, 49, 49);
+        width: 100%;
+        position: fixed;
+        padding: 10px;
+        padding-top: 30px;
+        /* padding-bottom: 20px; */
+        top: -20px;
+        left: 0;
+        opacity: 0.8;
+
+    }
+
+    li {
+        float: left;
+
+    }
+
+    li a {
+        display: block;
+        padding: 8px;
+        color: white;
+        text-decoration: none;
+    }
+
+    footer {
+        font-size: small;
+        padding: 5px;
+        width: 100vw;
+        background-color: rgb(49, 49, 49);
+    }
+</style>
+
+</html>

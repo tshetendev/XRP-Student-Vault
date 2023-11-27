@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Record System</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="formAll">
+        <header class="headingForm">
+            <h3>Start recording your grade</h3>
+            <h5>at</h5>
+            <h1>Student Record System</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./form.html">Form</a></li>
+                <li><a href="./history.html">Records</a></li>
+                <!-- <li><a href="#about">About</a></li> -->
+            </ul>
+        </nav>
+
+        <form id="recordForm">
+            <h3>Record Your Grades</h3>
+
+            <div class="formInput">
+                <label for="studentId">Student ID:</label><br>
+                <input type="text" id="studentId" required><br>
+
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" required><br>
+
+                <label for="year">Year:</label><br>
+                <input type="text" id="year" required><br>
+
+                <label for="course">Course:</label><br>
+                <input type="text" id="course" required><br>
+                <!-- <select id="course" required>
+                    <option value="Math">Math</option>
+                    <option value="Science">Science</option>
+                    <option value="History">History</option>
+                </select><br> -->
+
+                <label for="grade">Grade:</label><br>
+                <input type="text" id="grade" required><br>
+
+                <button type="button" onclick="submitRecord()">Submit</button>
+            </div>
+        </form>
+
+        <!-- <div class="formResult" id="result"></div>
+        <div class="formHistory" id="historyContainer"></div> -->
+        <div id="historyContainer"></div>
+
+        
+    </div>
+    <footer>
+        <p>© 2023 XRP Student Vault</p>
+    </footer>
+    <script>
+        function submitRecord() {
+            // Get form values
+            const studentId = document.getElementById('studentId').value;
+            const name = document.getElementById('name').value;
+            const year = document.getElementById('year').value;
+            const course = document.getElementById('course').value;
+            const grade = document.getElementById('grade').value;
+
+            // Display the submitted information
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML =
+                `<h2>Submitted Information</h2>
+                <p><strong>Student ID:</strong> ${studentId}</p>
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Year:</strong> ${year}</p>
+                <p><strong>Course:</strong> ${course}</p>
+                <p><strong>Grade:</strong> ${grade}</p>`;
+        }
+
+    </script>
+    <script src="frontend.js"></script>
+
+    <style>
+        ul {
+            list-style-type: none;
+            overflow: hidden;
+            background-color: rgb(49, 49, 49);
+            width: 100%;
+            position: fixed;
+            padding: 10px;
+            padding-top: 30px;
+            /* padding-bottom: 20px; */
+            top: -20px;
+            left: 0;
+            opacity: 0.8;
+
+        }
+
+        li {
+            float: left;
+
+        }
+
+        li a {
+            display: block;
+            padding: 8px;
+            color: white;
+            text-decoration: none;
+        }
+
+        footer {
+            font-size: small;
+            padding: 5px;
+            width: 100vw;
+            background-color: rgb(49, 49, 49);
+        }
+    </style>
+</body>
+
+</html>
